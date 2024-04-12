@@ -4,6 +4,7 @@ import 'package:flutter_application_1/router/router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../component/routing_btn_widget.dart';
+import 'fi_chart_screen.dart';
 import 'gap_screen.dart';
 
 class HomeScreen extends ConsumerWidget {
@@ -20,6 +21,11 @@ class HomeScreen extends ConsumerWidget {
             title: "Gap",
             onPressed: () =>
                 ref.read(routerProvider).goNamed(GapScreen.routeName),
+          ),
+          RoutingBtnWidget(
+            title: "fl_chart",
+            onPressed: () =>
+                ref.read(routerProvider).goNamed(FlChartScreen.routeName),
           ),
         ],
       ),

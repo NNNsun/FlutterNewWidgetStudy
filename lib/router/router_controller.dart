@@ -3,6 +3,7 @@ import 'package:flutter_application_1/screen/gap_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../screen/fi_chart_screen.dart';
 import '../screen/home_screen.dart';
 
 final routerController = ChangeNotifierProvider<RouterController>((ref) {
@@ -22,10 +23,15 @@ class RouterController extends ChangeNotifier {
             builder: (_, __) => const HomeScreen(),
             routes: [
               GoRoute(
-                  path: 'gap',
-                  name: GapScreen.routeName,
-                  builder: (_, __) => const GapScreen(),
-                  routes: const []),
+                path: 'gap',
+                name: GapScreen.routeName,
+                builder: (_, __) => const GapScreen(),
+              ),
+              GoRoute(
+                path: 'fl_chart',
+                name: FlChartScreen.routeName,
+                builder: (_, __) => const FlChartScreen(),
+              ),
             ]),
       ];
 }
