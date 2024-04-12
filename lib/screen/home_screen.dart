@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../component/routing_btn_widget.dart';
 import 'fi_chart_screen.dart';
 import 'gap_screen.dart';
+import 'segmented_button_screen.dart';
 
 class HomeScreen extends ConsumerWidget {
   static String get routeName => 'home';
@@ -26,6 +27,11 @@ class HomeScreen extends ConsumerWidget {
             title: "fl_chart",
             onPressed: () =>
                 ref.read(routerProvider).goNamed(FlChartScreen.routeName),
+          ),
+          RoutingBtnWidget(
+            title: "segmented_button",
+            onPressed: () =>
+                ref.read(routerProvider).goNamed(SegmentButtonScreen.routeName),
           ),
         ],
       ),

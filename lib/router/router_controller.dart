@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 
 import '../screen/fi_chart_screen.dart';
 import '../screen/home_screen.dart';
+import '../screen/segmented_button_screen.dart';
 
 final routerController = ChangeNotifierProvider<RouterController>((ref) {
   return RouterController(ref: ref);
@@ -31,6 +32,11 @@ class RouterController extends ChangeNotifier {
                 path: 'fl_chart',
                 name: FlChartScreen.routeName,
                 builder: (_, __) => const FlChartScreen(),
+              ),
+              GoRoute(
+                path: 'segmented_button',
+                name: SegmentButtonScreen.routeName,
+                builder: (_, __) => const SegmentButtonScreen(),
               ),
             ]),
       ];
